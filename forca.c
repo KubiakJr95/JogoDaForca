@@ -9,10 +9,10 @@ void Cabecalho(void);
 int main(){
 
     system("COLOR 2"); //muda a cor da fonte para verde
-    setlocale(LC_ALL,"Portuguese"); //Deixa a linguegem em português
+    setlocale(LC_ALL,"Portuguese"); //Deixa a linguegem em portuguÃªs
 
-    char palavra[25], lacuna[25], letra,opcao=0,erro[7],dica[25];
-    int i, tamanho, acertos=0, vida=6,acertou=0,contErro=0;
+    char palavra[25], lacuna[25], letra,erro[7],dica[25];
+    int i, tamanho, acertos=0, vida=6,acertou=0,contErro=0,opcao=0;
     
     do{
 		vida=6;
@@ -43,7 +43,7 @@ int main(){
 			    	erro[i] = ' ';
 				}
 			
-			    //Lê a palavra secreta
+			    //LÃª a palavra secreta
 			    printf("Digite a palavra secreta: ");
 			    scanf("%s",palavra); 
 			    
@@ -53,13 +53,13 @@ int main(){
 			    //armazena o tamanho da palavra digitada
 			    tamanho = strlen(palavra);
 			
-			    //define os traços com o numero de letras da palavra
+			    //define os traÃ§os com o numero de letras da palavra
 			    for(i=0;i<=tamanho;i++){
 			
 			        lacuna[i]='_';
 			    }												
 			
-			    //inicia o laço de reptição do jogo
+			    //inicia o laÃ§o de reptiÃ§Ã£o do jogo
 			    do{
 			        system("cls");
 			        
@@ -77,7 +77,7 @@ int main(){
 			
 			
 			
-			        //imprime os traços
+			        //imprime os traÃ§os
 			        printf("\t\t\t\t");
 			        for(i=0;i<tamanho;i++){	
 			            printf("%c ",lacuna[i]);
@@ -85,8 +85,8 @@ int main(){
 			
 			
 			        
-			        //imprime as letras erradas já chutadas
-			        printf("\n\n\t\t\tLetras já chutadas\n");
+			        //imprime as letras erradas jÃ¡ chutadas
+			        printf("\n\n\t\t\tLetras jÃ¡ chutadas\n");
 			        printf("\t\t\t");
 			        for(i=0;i<7;i++){
 			    		printf("%c ",erro[i]);
@@ -95,7 +95,7 @@ int main(){
 			
 					printf("\n\n");
 			
-			        //Lê a letra chutada pelo player
+			        //LÃª a letra chutada pelo player
 			        printf("\nDigite uma letra: ");
 			        letra = getche(); 
 			        getche();
@@ -104,7 +104,7 @@ int main(){
 			
 			
 			
-			        //testa se a letra digitada pertence à palavra
+			        //testa se a letra digitada pertence Ã  palavra
 			        for(i=0;i<tamanho;i++){
 			
 			            if(letra==palavra[i]){
@@ -142,8 +142,8 @@ int main(){
 				    
 				    if(acertos >= tamanho){
 				    	
-				    	//imprime a mensagem de vitória caso o jogador tenha ganho o jogo
-				    	printf("\n\n\n\t\t\tParabéns! Você ganhou!\n\n");
+				    	//imprime a mensagem de vitÃ³ria caso o jogador tenha ganho o jogo
+				    	printf("\n\n\n\t\t\tParabÃ©ns! VocÃª ganhou!\n\n");
 				    	printf("\n\t\t\t");
 				    	for(i=0;i<tamanho;i++){
 				    		printf("%c", palavra[i]);
@@ -172,8 +172,8 @@ int main(){
 				case 2:
 					system("cls");
 					Cabecalho();
-					printf("O jogo da forca é um jogo em que o jogador tem que \nacertar qual é a palavra proposta, tendo como dica o número de letras e o \ntema ligado à palavra. \nA cada letra errada, é desenhada uma parte do corpo do enforcado. \nO jogo termina ou com o acerto da palavra ou com o término do \npreenchimento das partes corpóreas do enforcado.");
-					printf("\n\nDigite a palavra secreta sem que o outro jogador veja. Digite a dica para ajudá-lo a acertar a palavra durante o jogo.\n\n\n\n");
+					printf("O jogo da forca Ã© um jogo em que o jogador tem que \nacertar qual Ã© a palavra proposta, tendo como dica o nÃºmero de letras e o \ntema ligado Ã  palavra. \nA cada letra errada, Ã© desenhada uma parte do corpo do enforcado. \nO jogo termina ou com o acerto da palavra ou com o tÃ©rmino do \npreenchimento das partes corpÃ³reas do enforcado.");
+					printf("\n\nDigite a palavra secreta sem que o outro jogador veja. Digite a dica para ajudÃ¡-lo a acertar a palavra durante o jogo.\n\n\n\n");
 					system("pause");
 					break;	
 				
@@ -214,7 +214,6 @@ void Cabecalho(void){
 	
 	printf("Algoritmos e linguagem C\t   JOGO DA FORCA\t   Roberto Kubiak Junior\n\n\n\n");
 }
-
 
 
 
